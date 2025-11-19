@@ -1,0 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/16 18:18:15 by marvin            #+#    #+#             */
+/*   Updated: 2025/11/16 18:18:15 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strchr(const char *str, int c) //char * because we are returning the position in the string where c is found
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == (char)c)
+			return ((char *)&str[i]);
+		/* casting to char* to match return type 
+		+ returning address of str[i]
+		+ pointer to any character in a string is automatically a pointer to the part of the string starting from that character until it reaches the null terminator.*/
+		i++;
+	}
+	if (c == '\0')
+		return ((char *)&str[i]);
+	return (NULL);
+}
