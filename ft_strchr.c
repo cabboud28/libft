@@ -21,9 +21,6 @@ char	*ft_strchr(const char *str, int c) //char * because we are returning the po
 	{
 		if (str[i] == (char)c)
 			return ((char *)&str[i]);
-		/* casting to char* to match return type 
-		+ returning address of str[i]
-		+ pointer to any character in a string is automatically a pointer to the part of the string starting from that character until it reaches the null terminator.*/
 		i++;
 	}
 	if (c == '\0')
