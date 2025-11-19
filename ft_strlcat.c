@@ -13,7 +13,6 @@
 #include "libft.h"
 
 size_t	ft_strlcat(char dest[], const char src[], size_t d_size)
-/*d_size = total size of destination buffer exp: buf[10] --> d_size = 10*/
 {
 	size_t	j;
 	size_t	size_src;
@@ -21,14 +20,13 @@ size_t	ft_strlcat(char dest[], const char src[], size_t d_size)
 
 	j = 0;
 	size_src = ft_strlen(src);
-	size_dest = ft_strlen(dest); /*current length of destination string exp: buf[10] = "Hello" --> size_dest = 5 */
+	size_dest = ft_strlen(dest);
 	if (d_size == 0)
 		return (size_src);
 	if (d_size <= size_dest)
 		return (d_size + size_src);
-	/*if there is space in destination buffer, append src to dest: (d_size > size_dest) */
 	while (src[j]
-		&& size_dest + j < d_size - 1) /*-1 to leave space for null terminator*/
+		&& size_dest + j < d_size - 1)
 	{
 		dest[size_dest + j] = src[j];
 		j++;
