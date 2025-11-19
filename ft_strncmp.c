@@ -20,7 +20,7 @@ int	ft_strncmp(const char str1[], const char str2[], size_t num)
 	if (num == 0)
 		return (0);
 	while (str1[i] && str2[i]
-		&& i < num - 1) /*-1 to compare up to exactly num characters (then the last comparison is done outside the loop(in the return statement))*/
+		&& i < num - 1)
 	{
 		if (str1[i] != str2[i])
 			return (str1[i] - str2[i]);
