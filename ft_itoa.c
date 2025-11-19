@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 static int	int_len(long n)
 {
 	int	len;
@@ -51,3 +53,4 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+
