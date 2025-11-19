@@ -20,9 +20,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	if (!needle[i])
 		return ((char *)&haystack[i]);
-	/* OR if (!*needle)
-	return ((char *)haystack); 
-	if needle is empty, return haystack(7a tballich mn awwal character by default)*/
 	while (haystack[i] && i < len)
 	{
 		j = 0;
@@ -36,3 +33,4 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+
