@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c) //char * because we are returning the position in the string where c is found
+char	*ft_strchr(const char *str, int c)
 {
 	int	i;
 
@@ -27,3 +27,4 @@ char	*ft_strchr(const char *str, int c) //char * because we are returning the po
 		return ((char *)&str[i]);
 	return (NULL);
 }
+
